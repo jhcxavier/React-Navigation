@@ -1,6 +1,8 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 
 const Navbar2 = () => {
+	const history = useHistory();
 	return (
 		<nav className="navbar navbar-expand-lg navbar-light bg-light">
 			<div className="container-fluid">
@@ -25,18 +27,23 @@ const Navbar2 = () => {
 							</a>
 						</li>
 						<li className="nav-item">
-							<a className="nav-link" href="#">
-								Features
+							<a className="nav-link" href="#" onClick={() => history.push("/page1")}>
+								Page 1
 							</a>
 						</li>
 						<li className="nav-item">
-							<a className="nav-link" href="#">
-								Pricing
+							<a className="nav-link" href="#" onClick={() => history.push("/page2")}>
+								Page 2
 							</a>
 						</li>
 						<li className="nav-item">
-							<a className="nav-link disabled" href="#" tabIndex="-1" aria-disabled="true">
-								Disabled
+							<a
+								className="nav-link"
+								href="#"
+								tabIndex="-1"
+								aria-disabled="true"
+								onClick={() => history.push("/page3")}>
+								Page 3
 							</a>
 						</li>
 					</ul>
